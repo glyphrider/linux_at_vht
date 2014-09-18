@@ -18,6 +18,8 @@ hosts: files mdns4_minimal dns
 
 You need to add `qalab.local, devlab.local` to the Additional Search Domains entry in the IPv4 Settings for your network connection.
 
+![search_domains.png](search_domains.png)
+
 ## FreeTDS ODBC Driver
 
 FreeTDS is an open source driver to connect to SQL Server (and, by extension, Sybase) databases. The ODBC driver for it allows the unixodbc system to connect to SQL Server. This, in turn, enables Erlang's odbc module to connect to our SQL Server databases. Install the TDS ODBC driver by typing
