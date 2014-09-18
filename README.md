@@ -18,7 +18,7 @@ hosts: files mdns4_minimal dns
 
 You need to add `qalab.local, devlab.local` to the Additional Search Domains entry in the IPv4 Settings for your network connection.
 
-![search_domains.png](search_domains.png)
+![search_domains.png](images/search_domains.png)
 
 ## FreeTDS ODBC Driver
 
