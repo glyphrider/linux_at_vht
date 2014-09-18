@@ -43,7 +43,7 @@ TDS Version = 7.2
 ## Build Erlang
 
 Acquire the `make_erlang_alternative` script.
-Download **OTP R16B03-1** (src and doc_man) from http://erlang.org, as build with the following recipe
+Download **OTP R16B03-1** (src and doc_man) from [the Erlang web site](http://erlang.org), as build with the following recipe
 
 ```
 sudo apt-get build-dep erlang # installs the build dependencies
@@ -64,7 +64,7 @@ You can, later, install other versions of erlang and use the alternative scripts
 
 ## Build NodeJS
 
-Download NodeJS from http://nodejs.org and build into /usr/local
+Download NodeJS from [the NodeJS web site](http://nodejs.org) and build into `/usr/local`
 
 ```
 cd ~/src
@@ -81,11 +81,11 @@ npm install -g grunt-cli
 npm install -g bower
 ```
 
-You should see executables in /usr/local/bin for node, npm, grunt, and bower.
+You should see executables in `/usr/local/bin` for `node`, `npm`, `grunt`, and `bower`.
 
 ## RVM and Ruby
 
-Install RVM via the web.
+Install [RVM](http://rvm.io) from the web.
 
 ```
 sudo apt-get install curl git-core
