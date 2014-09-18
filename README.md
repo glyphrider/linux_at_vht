@@ -28,7 +28,7 @@ FreeTDS is an open source driver to connect to SQL Server (and, by extension, Sy
 sudo apt-get install tdsodbc
 ```
 
-Then identify the actual driver to use. Also, provide a better default protocol version (that actaully works with SQL Server). Update your /etc/odbcinst.ini file with the new driver, as
+Then identify the actual driver to use. Also, provide a better default protocol version (that actually works with SQL Server). Update your /etc/odbcinst.ini file with the new driver, as
 
 ```
 [FreeTDS]
