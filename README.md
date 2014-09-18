@@ -90,7 +90,6 @@ Install [RVM](http://rvm.io) from the web.
 ```
 sudo apt-get install curl git-core
 \curl -sSL https://get.rvm.io | bash -s stable
-rvm install 1.9
 ```
 
 Update your gnome-terminal settings to `run command as a login shell`. Restart the terminal. RVM should now work, so you can install ruby.
