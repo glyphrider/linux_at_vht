@@ -1,0 +1,22 @@
+#!/bin/bash
+
+OTP_ROOT=$1
+ALT_VERSION=$2
+
+ERTS_VERSION=$(ls -d ${OTP_ROOT}/lib/erlang/erts-* | sed 's/.*\/erts-\([0-9\.]*\)$/\1/')
+
+echo -n "sudo update-alternatives"
+echo -n " --install /usr/lib/erlang erlang ${OTP_ROOT}/lib/erlang ${ALT_VERSION}"
+for exe in ${OTP_ROOT}/bin/*
+do
+  BASE=$(basename ${exe})
+  echo -n " --slave /usr/bin/${BASE} ${BASE} ${exe}"
+done
+
+for man in $(cd ${OTP_ROOT}/lib/erlang/erts-${ERTS_VERSION}; find man -type f)
+do
+  BASE=$(basename ${man})
+  echo -n " --slave /usr/share/${man} ${BASE} ${OTP_ROOT}/lib/erlang/erts-${ERTS_VERSION}/${man}"
+done
+
+echo ""
