@@ -98,3 +98,16 @@ Update your gnome-terminal settings to `run command as a login shell`. Restart t
 ```
 rvm install 1.9
 ```
+
+## HipChat
+
+The instructions for installing hipchat, from their [web site](http://hipchat.com) involve `sudo su`, so I don't like them. Here's how to accomplish the same thing with appropriate sudos. It also shows off a cute trick involving `tee`.
+
+```
+echo "deb http://downloads.hipchat.com/linux/apt stable main" | sudo tee /etc/apt/sources.list.d/atlassian-hipchat.list
+wget -O - https://www.hipchat.com/keys/hipchat-linux.key | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install hipchat
+```
+
+Yes, I know... You now have to sudo each command. But, to me, this seems more correct. You are using sudo to elevate permissions only when you need to do so, and only for exactly what you need to accomplish. Sites that might restrict you sudo access to avoid `sudo -s` and `sudo su` would be appeased by the alternate approach.
