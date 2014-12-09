@@ -77,8 +77,8 @@ sudo make install
 Get the needed global packages installed
 
 ```
-npm install -g grunt-cli
-npm install -g bower
+sudo npm install -g grunt-cli
+sudo npm install -g bower
 ```
 
 You should see executables in `/usr/local/bin` for `node`, `npm`, `grunt`, and `bower`.
