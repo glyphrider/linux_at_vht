@@ -42,22 +42,20 @@ TDS Version = 7.2
 
 ## Build Erlang
 
-Acquire the `make_erlang_alternative` script.
-Download **OTP R16B03-1** (src and doc_man) from [the Erlang web site](http://erlang.org), as build with the following recipe
+Acquire the `make-erlang-alternative` script.
+Download **OTP 17.3** (src and doc_man) from [the Erlang web site](http://erlang.org), as build with the following recipe
 
 ```
-sudo apt-get build-dep erlang # installs the build dependencies
-sudo apt-get install wxgtk2.8-dev # dependency that only applies to graphical windows
+sudo apt-get install build-essential libncurses5-dev unixodbc-dev libssl-dev openjdk-7-jdk libwxgtk2.8-dev libglu1-mesa-dev # installs the build dependencies
 mkdir ~/src
 cd ~/src
-tar -xzf ../Downloads/otp_src_R16B03-1.tar.gz
+curl http://www.erlang.org/download/otp_src_17.3.tar.gz | tar -xz -f -
+cd otp_src_17.3
 ./configure --prefix=/opt/erlang/R16B03-1
 make
 sudo make install
-cd /opt/erlang/R16B03-1/lib/erlang/erts-5.10.4/man
-tar -xz --strip-components=1 -f ~/Downloads/otp_doc_man_R16B03-1.tar.gz
-cd
-`bin/make_erlang_alternative /opt/erlang/R16B03-1 510` # 510 is the priority
+curl http://www.erlang.org/download/otp_doc_man_17.3.tar.gz | tar -xz --strip-components=1 -C /opt/erlang/17.3/lib/erlang/erts-6.3/man -f -
+curl -sSL https://raw.githubusercontent.com/glyphrider/linux_at_vht/master/make-erlang-alternative | bash -s /opt/erlang/17.3 1703 | bash -s # 1703 is the priority
 ```
 
 You can, later, install other versions of erlang and use the alternative scripts to quickly switch betweeen them.
