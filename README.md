@@ -92,8 +92,10 @@ sudo apt-get install curl git-core
 
 Update your gnome-terminal settings to `run command as a login shell`. Restart the terminal. RVM should now work, so you can install ruby.
 
+The **tk** extensions will require `sudo apt-get install tk-dev tcl-dev`.
+
 ```
-rvm install 1.9
+rvm install 1.9 --with-tclConfig-file=/usr/lib/x86_64-linux-gnu/tclConfig.sh --with-tkConfig-file=/usr/lib/x86_64-linux-gnu/tkConfig.sh
 ```
 
 ## HipChat
