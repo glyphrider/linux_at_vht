@@ -51,7 +51,7 @@ mkdir ~/src
 cd ~/src
 curl http://www.erlang.org/download/otp_src_17.3.tar.gz | tar -xz -f -
 cd otp_src_17.3
-./configure --prefix=/opt/erlang/17.03
+./configure --prefix=/opt/erlang/17.3
 make
 sudo make install
 curl http://www.erlang.org/download/otp_doc_man_17.3.tar.gz | sudo tar -xz --strip-components=1 -C /opt/erlang/17.3/lib/erlang/erts-6.3/man -f -
