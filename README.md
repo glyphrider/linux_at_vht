@@ -162,3 +162,11 @@ Then add some magic into your `.emacs` file. This code is derived from sample el
 (add-to-list 'exec-path (concat erlang-root-dir "/bin"))
 (require 'erlang-start)
 ```
+
+## Android Studio
+
+Fedora
+
+```sh
+sudo yum install glibc.i686 zlib.i686 libstdc++.i686 ncurses-libs.i686 glibc zlib libstdc++ ncurses-libs mesa-libGL-devel adb
+```
