@@ -129,3 +129,30 @@ sudo apt-get install hipchat
 ```
 
 Yes, I know... You now have to sudo each command. But, to me, this seems more correct. You are using sudo to elevate permissions only when you need to do so, and only for exactly what you need to accomplish. Sites that might restrict you sudo access to avoid `sudo -s` and `sudo su` would be appeased by the alternate approach.
+
+## Emacs and erlang-mode
+
+Install emacs, just because.
+
+```sh
+sudo apt-get install emacs
+```
+
+Or, for Fedora,
+```sh
+sudo yum install emacs
+```
+
+Then add some magic into your `.emacs` file. This code is derived from sample elisp from erlang.org and their documentation. I would argue that it is *significantly improved* over their version.
+
+```lisp
+; erlang-mode
+(setq erlang-root-dir "/usr/lib/erlang")
+(add-to-list 'load-path
+ (concat erlang-root-dir "/lib/"
+	 (car
+	  (directory-files
+	   (concat erlang-root-dir "/lib/") nil "^tools\-.*")) "/emacs"))
+(add-to-list 'exec-path (concat erlang-root-dir "/bin"))
+(require 'erlang-start)
+```
