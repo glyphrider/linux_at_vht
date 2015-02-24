@@ -54,7 +54,7 @@ cd otp_src_17.3
 ./configure --prefix=/opt/erlang/17.3
 make
 sudo make install
-curl http://www.erlang.org/download/otp_doc_man_17.3.tar.gz | sudo tar -xz --strip-components=1 -C /opt/erlang/17.3/lib/erlang/erts-6.3/man -f -
+curl http://www.erlang.org/download/otp_doc_man_17.3.tar.gz | sudo tar -xz --strip-components=1 -C /opt/erlang/17.3/lib/erlang/erts-6.2/man -f -
 curl -sSL https://raw.githubusercontent.com/glyphrider/linux_at_vht/master/make-erlang-alternative | bash -s /opt/erlang/17.3 1703 | bash -s # 1703 is the priority
 ```
 
