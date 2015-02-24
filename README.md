@@ -111,10 +111,16 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 
 Update your gnome-terminal settings to `run command as a login shell`. Restart the terminal. RVM should now work, so you can install ruby.
 
-The **tk** extensions will require `sudo apt-get install tk-dev tcl-dev`.
+The **tk** extensions will require `sudo apt-get install tk-dev` (`sudo yum install tk-devel` for Fedora).
 
+Under Fedora, the installation just works,
+```sh
+rvm install 2.2
 ```
-rvm install 1.9 --with-tclConfig-file=/usr/lib/x86_64-linux-gnu/tclConfig.sh --with-tkConfig-file=/usr/lib/x86_64-linux-gnu/tkConfig.sh
+
+Under Ubuntu, a little additional coaxing is required,
+```sh
+rvm install 2.2 --with-tclConfig-file=/usr/lib/x86_64-linux-gnu/tclConfig.sh --with-tkConfig-file=/usr/lib/x86_64-linux-gnu/tkConfig.sh
 ```
 
 ## HipChat
