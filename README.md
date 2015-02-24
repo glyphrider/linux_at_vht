@@ -38,7 +38,15 @@ TDS Version = 7.2
 
 ## General Compilation
 
-`sudo apt-get install build-essential`
+### Debian/Ubuntu
+```sh
+sudo apt-get install build-essential
+```
+
+### Fedora/RedHat
+```sh
+sudo yum groupinstall "Development Tools" "Development Libraries"
+```
 
 ## Build Erlang
 
@@ -47,12 +55,11 @@ Download **OTP 17.3** (src and doc_man) from [the Erlang web site](http://erlang
 
 ### Install Pre-Requisites (Debian/Ubuntu)
 ```sh
-sudo apt-get install build-essential libncurses5-dev unixodbc-dev libssl-dev openjdk-7-jdk libwxgtk2.8-dev libglu1-mesa-dev # installs the build dependencies
+sudo apt-get install libncurses5-dev unixodbc-dev libssl-dev openjdk-7-jdk libwxgtk2.8-dev libglu1-mesa-dev # installs the build dependencies
 ```
 
 ### Install Pre-Requisites (Fedora/RedHat)
 ```sh
-sudo yum groupinstall "Development Tools" "Development Libraries"
 sudo yum install ncurses-devel unixODBC-devel openssl-devel java-1.8.0-openjdk-devel wxGTK-devel 
 ```
 
