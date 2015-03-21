@@ -104,7 +104,7 @@ You should see executables in `/usr/local/bin` for `node`, `npm`, `grunt`, and `
 Install [RVM](http://rvm.io) from the web.
 
 ```
-sudo apt-get install curl git-core gpg
+sudo apt-get install curl git-core gnupg
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 \curl -sSL https://get.rvm.io | bash -s stable
 ```
