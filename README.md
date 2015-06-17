@@ -2,7 +2,7 @@
 
 ## Nameservice Switching
 
-In order to resolve domains that end in .local, change the following line in /etc/nsswitch.conf
+In order to _resolve_ domains that end in `.local`, change the following line in `/etc/nsswitch.conf`
 
 ```
 hosts: files mdns4_minimal [NOTFOUND=return] dns
