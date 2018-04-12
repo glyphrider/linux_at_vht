@@ -1,5 +1,25 @@
 # Getting Linux to work at VHT
 
+## Password Policy Enforcement
+
+Update `/etc/pam.d/common-password` changing the line
+
+`password [success=1, default=ignore] pam_unix.so obscure sha512`
+
+to read
+
+`password [success=1, default=ignore] pam_unix.so obscure sha512 minlen=8 remember=8 ucredit=-1 ocredit=-1`
+
+Then modify `/etc/login.defs` changing the line
+
+`PASS_MAX_DAYS 99999`
+
+to read
+
+`PASS_MAX_DAYS 90`
+
+_Optionally_ expire the existing password immediately with `chage -d 0 _username_` or within 90 days with `chage -d 90 _username_`.
+
 ## Nameservice Switching
 
 In order to _resolve_ domains that end in `.local`, change the following line in `/etc/nsswitch.conf`
